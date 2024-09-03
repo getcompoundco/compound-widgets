@@ -18,6 +18,9 @@ body {
   height: 800px;
   max-width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .goal-header {
@@ -47,7 +50,7 @@ body {
 .goal-text {
   padding: 30px 0px 15px;
   color: #A0D234;
-  font-family: Manier;
+  font-family: "Manier", sans-serif;
   font-size: 24px;
   font-weight: 700;
 }
@@ -64,15 +67,12 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 375px;
   background-color: white;
 }
 
 .text-block {
   height: 82px;
-  width: inherit;
-  gap: 4px;
 }
 
 .title {
@@ -91,13 +91,8 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
-  letter-spacing: -0.011;
   text-align: center;
   margin: 0px;
-}
-
-.input-container {
-  height: 227px;
 }
 
 .goal-footer {
@@ -123,4 +118,40 @@ body {
 
 .continue-btn:hover {
   background-color: #a4cd1a;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #E1E4EA;
+  border-radius: 100px;
+  padding: 12px;
+  width: 232px;
+  height: 28px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.input-wrapper svg {
+  margin-right: 12px;
+}
+
+#savings-amount {
+  font-family: "Articulat CF", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #112744;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.currency-symbol {
+  font-family: "Articulat CF", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #A0D234;
+  margin-left: 8px;
 }
