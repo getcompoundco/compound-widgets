@@ -1,0 +1,126 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: gray;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.goal-container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 390px;
+  height: 800px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.goal-header {
+  height: 236px;
+  padding-top: 30px;
+  background-color: #0a0a0a;
+}
+
+.header-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 38px;
+}
+
+.divider {
+  color: white;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+.goal-text {
+  padding: 30px 0px 15px;
+  color: #A0D234;
+  font-family: Manier;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.coins-logo {
+  width: 192px;
+  height: 109px;
+}
+
+.goal-body {
+  padding: 32px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 375px;
+  background-color: white;
+}
+
+.text-block {
+  height: 82px;
+  width: inherit;
+  gap: 4px;
+}
+
+.title {
+  color: #112744;
+  font-family: "Manier", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 34px;
+  text-align: center;
+  margin: 0px;
+}
+
+.desc {
+  color: #525866;
+  font-family: "Articulat CF", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.011;
+  text-align: center;
+  margin: 0px;
+}
+
+.input-container {
+  height: 227px;
+}
+
+.goal-footer {
+  height: 50px;
+  background-color: #898d9c1a;
+  border-radius: 0 0 20px 20px;
+  padding: 20px;
+}
+
+.continue-btn {
+  background-color: #a0d234;
+  border: none;
+  border-radius: 999px;
+  height: 50px;
+  color: #0a0a0a;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Articulat CF", sans-serif;
+  line-height: 20px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.continue-btn:hover {
+  background-color: #a4cd1a;
+}
