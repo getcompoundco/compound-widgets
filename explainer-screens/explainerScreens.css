@@ -60,7 +60,7 @@ body {
 
 .content-title {
   color: #112744;
-  font-family: Manier;
+  font-family: "Manier", sans-serif;
   font-size: 26px;
   font-weight: 500;
   line-height: 34px;
@@ -70,7 +70,7 @@ body {
 
 .content-desc-1 {
   color: #525866;
-  font-family: Articulat CF;
+  font-family: "Articulat CF", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -81,7 +81,7 @@ body {
 
 .content-desc-2 {
   color: #525866;
-  font-family: Articulat CF;
+  font-family: "Articulat CF", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -92,7 +92,7 @@ body {
 
 .content-desc-3 {
   color: #525866;
-  font-family: Articulat CF;
+  font-family: "Articulat CF", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
