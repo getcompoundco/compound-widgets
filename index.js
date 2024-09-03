@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const indicators = document.querySelectorAll(".indicator");
   const leftButton = document.querySelector(".carousel-btn.left");
   const rightButton = document.querySelector(".carousel-btn.right");
-  const texts = document.querySelectorAll(".text");
+  const texts = document.querySelectorAll(".content-text");
 
   let currentIndex = 0;
 
@@ -36,5 +36,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  updateCarousel(currentIndex); // Initialize the carousel
+  updateCarousel(currentIndex);
 });
