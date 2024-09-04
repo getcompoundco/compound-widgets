@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Articulat CF", sans-serif;
   background-color: gray;
   color: #333;
   margin: 0;
@@ -87,7 +87,6 @@ body {
 
 .desc {
   color: #525866;
-  font-family: "Articulat CF", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -110,7 +109,6 @@ body {
   color: #0a0a0a;
   font-size: 16px;
   font-weight: 500;
-  font-family: "Articulat CF", sans-serif;
   line-height: 20px;
   width: 100%;
   cursor: pointer;
@@ -132,12 +130,11 @@ body {
   margin: 0 auto;
 }
 
-.input-wrapper svg {
+.input-wrapper .jar-logo {
   margin-right: 12px;
 }
 
 #savings-amount {
-  font-family: "Articulat CF", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 32px;
@@ -149,7 +146,6 @@ body {
 }
 
 .currency-symbol {
-  font-family: "Articulat CF", sans-serif;
   font-size: 24px;
   font-weight: 500;
   color: #A0D234;
