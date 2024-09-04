@@ -40,5 +40,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function handleContinue() {
-  return window.location.href = '../savings-screen/savingsGoal.html';
+  return window.location.href = '../savings-screen/savingsGoal/savingsGoal.html';
 }
