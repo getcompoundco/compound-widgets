@@ -1,4 +1,4 @@
 function handleContinue() {
-    return window.location.href = './explainer-screen/explainerScreen.html';
+    return window.location.href = './src/components/explainer-screen/explainerScreen.html';
 }
 
