@@ -205,7 +205,7 @@ body {
   top: 12px;
   bottom: 12px;
   width: 2px;
-  background-color: #bdc3c7;
+  background-color: #E1E4EA;
 }
 
 .timeline-item {
@@ -220,7 +220,7 @@ body {
   left: -29px;
   width: 20px;
   height: 20px;
-  border: 2px solid #bdc3c7;
+  border: 2px solid #E1E4EA;
   border-radius: 50%;
   background-color: #ffffff;
 }
