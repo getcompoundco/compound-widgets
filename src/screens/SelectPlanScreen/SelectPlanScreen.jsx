@@ -19,6 +19,7 @@ class SelectPlanScreen extends HTMLElement {
     this.shadowRoot.innerHTML = `
         <style>${styles}</style>
         <modal-header
+        current-screen="select-plan"
           header-text="90 Days. AED 39 Earned."
           header-image="${hourglass}"
         ></modal-header>

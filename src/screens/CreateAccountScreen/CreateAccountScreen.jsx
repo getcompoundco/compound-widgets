@@ -24,7 +24,7 @@ class CreateAccountScreen extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <modal-header header-text="Do more with your Savings. Earn 12%." header-image="${mobileNotification}"></modal-header>
+      <modal-header current-screen="create-account" header-text="Do more with your Savings. Earn 12%." header-image="${mobileNotification}"></modal-header>
       <div class="create-account-screen">
         <div class="content">
           <div class="text-block">

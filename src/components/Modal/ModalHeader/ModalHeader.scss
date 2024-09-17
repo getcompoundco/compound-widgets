@@ -5,6 +5,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  .back-button > img{
+    margin-top: 4px;
+  }
 
   .header-logos {
     display: flex;
@@ -26,13 +38,13 @@
 
   .header-text {
     padding: 30px 24px 15px;
-    color: #A0D234;
+    color: #a0d234;
     font-family: "Manier", sans-serif;
     font-size: 24px;
     font-weight: 700;
     text-align: center;
   }
-  
+
   .header-image {
     width: 192px;
     height: 109px;
