@@ -1,0 +1,140 @@
+// Variables
+$primary-color: #112744;
+$secondary-color: #A0D234;
+$error-color: #FF0000;
+$border-color: #E1E4EA;
+
+$font-primary: "Manier", sans-serif;
+$font-secondary: "Articulat CF", sans-serif;
+
+$spacing-unit: 8px;
+$mobile-breakpoint: 450px;
+
+// Mixins
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin font-style($size, $weight, $line-height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+.create-account-screen {
+  @include flex-column;
+  height: 100%;
+
+  .content {
+    padding: $spacing-unit * 4;
+    @include flex-column;
+    align-items: center;
+    height: 375px;
+    background-color: white;
+  }
+
+  .text-block {
+    height: 50px;
+  }
+
+  .title {
+    color: $primary-color;
+    font-family: $font-primary;
+    @include font-style(26px, 500, 34px);
+    text-align: center;
+    margin: 0;
+  }
+
+  .subtitle {
+    width: 10rem;
+    height: 20px;
+    @include font-style(14px, 500, 20px);
+    text-transform: capitalize;
+    letter-spacing: -0.006em;
+    font-family: $font-secondary;
+    text-align: left;
+    margin-bottom: 5px;
+    align-self: flex-start;
+  }
+
+  .input-container {
+    position: relative;
+    @include flex-column;
+    align-items: center;
+  }
+
+  .input-wrapper {
+    @include flex-center;
+    border: 1px solid $border-color;
+    border-radius: 100px;
+    padding: $spacing-unit * 1.5;
+    width: 320px;
+    height: 28px;
+    max-width: 300px;
+
+    &.error {
+      border-color: $error-color;
+    }
+
+    .country-code {
+      border: none;
+      background-color: transparent;
+      font-size: 18px;
+      margin-right: $spacing-unit;
+      cursor: pointer;
+      font-family: $font-secondary;
+
+      &.focus {
+        border: none;
+      }
+    }
+
+    .divider {
+      width: 1px;
+      height: 40px;
+      background-color: $border-color;
+      margin: 0 $spacing-unit;
+    }
+
+    #phone {
+      @include font-style(18px, 500, 32px);
+      color: $primary-color;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      width: 100%;
+      text-align: left;
+      font-family: $font-secondary;
+    }
+  }
+
+  .error-message {
+    color: $error-color;
+    font-size: 14px;
+    max-width: 300px;
+    margin: 0;
+    display: none;
+    position: absolute;
+    bottom: -25px;
+    font-family: $font-secondary;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    height: 67%;
+
+    .input-wrapper {
+      width: 300px;
+    }
+
+    .subtitle {
+      padding-left: 1.2rem;
+    }
+  }
+}

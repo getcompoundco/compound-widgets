@@ -1,0 +1,75 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+
+  &.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    width: 100%;
+    max-width: 390px;
+    border-radius: 16px;
+    position: relative;
+    animation: modalGrow 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .close {
+    color: #fff;
+    position: absolute;
+    top: 6px;
+    right: 16px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+
+    &:hover,
+    &:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .slide-container {
+    width: 100%;
+    overflow: hidden;
+    will-change: transform;
+  }
+}
+
+@keyframes modalGrow {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+
+@media screen and (max-width: 450px) {
+  .modal .modal-content {
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    border-radius: 0px;
+  }
+}
