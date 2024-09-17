@@ -12,73 +12,74 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 24px 32px;
+    padding: 32px;
     height: 375px;
     flex-grow: 1;
-  }
 
-  .title {
-    color: #112744;
-    font-family: "Manier", sans-serif;
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 34px;
-    margin: 0 0 8px;
-  }
-
-  .end-date {
-    color: #FF69B4;
-    font-family: "Articulat CF", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    margin: 0;
-  }
-
-  .plan-details {
-    background-color: #f7f8fa;
-    border-radius: 16px;
-    padding: 16px;
-    width: 100%;
-    max-width: 326px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .detail-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
-    border-bottom: 1px dashed #E1E4EA;
-    padding-bottom: 16px;
-
-    &:last-child {
-      margin-bottom: 0;
-      border-bottom: none;
-      padding-bottom: 0;
+    .content-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 25px;
     }
-  }
 
-  .detail-icon {
-    font-size: 20px;
-    margin-right: 12px;
-  }
+    .content-title {
+      color: #112744;
+      font-family: "Manier", sans-serif;
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 34px;
+      margin: 0;
+    }
 
-  .detail-label {
-    flex-grow: 1;
-    text-align: left;
-    font-family: "Articulat CF", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #112744;
-  }
+    .content-sub-title {
+      font-family: "Articulat CF", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0;
+  
+      span {
+        color: #FF69B4;
+      }
+    }
 
-  .detail-value {
-    font-family: "Articulat CF", sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    color: #112744;
+    .plan-details {
+      background-color: #f7f8fa;
+      border-radius: 16px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .detail-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px dashed #E1E4EA;
+      padding: 16px;
+    }
+  
+    .detail-icon {
+      font-size: 20px;
+      margin-right: 12px;
+    }
+  
+    .detail-label {
+      flex-grow: 1;
+      text-align: left;
+      font-family: "Articulat CF", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #112744;
+    }
+  
+    .detail-value {
+      font-family: "Articulat CF", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #112744;
+    }
   }
 
   @media (max-width: 450px) {
