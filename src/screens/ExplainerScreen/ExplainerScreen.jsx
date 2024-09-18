@@ -55,7 +55,7 @@ class ExplainerScreen extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <modal-header></modal-header>
+      <modal-header current-screen="explainer"></modal-header>
       <div class="container">
         <div class="body">
           <div class="content">

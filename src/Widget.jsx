@@ -42,6 +42,10 @@ class CompoundWidget extends HTMLElement {
     modal.addEventListener('footer-continue', (e) => {
       modal.setAttribute('current-screen', e.detail.screen);
     });
+
+    modal.addEventListener("header-back", (e) => {
+      modal.setAttribute("current-screen", e.detail.screen);
+    });
   }
 }
 

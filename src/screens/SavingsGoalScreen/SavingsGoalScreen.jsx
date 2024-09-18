@@ -27,6 +27,7 @@ class SavingsGoalScreen extends HTMLElement {
     this.shadowRoot.innerHTML = `
         <style>${styles}</style>
         <modal-header
+          current-screen="savings-goal"
           header-text="Earn 20% on Every Deposit"
           header-image="${goldAndSilverCoins}"
         ></modal-header>
@@ -46,9 +47,7 @@ class SavingsGoalScreen extends HTMLElement {
                 <input
                   type="text"
                   id="savings-amount"
-                  value="${this.formatNumber(
-                  this.savingsAmount
-                )}"
+                  value="${this.formatNumber(this.savingsAmount)}"
                   inputmode="numeric"
                   aria-label="Enter savings amount"
                   placeholder=""
