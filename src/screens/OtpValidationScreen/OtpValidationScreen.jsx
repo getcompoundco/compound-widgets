@@ -24,7 +24,7 @@ class OtpValidationScreen extends HTMLElement {
     this.shadowRoot.innerHTML = `
         <style>${styles}</style>
         <div class="otp-screen-header-container">
-          <modal-header header-text="All that you deserve. <br/> And some more." header-image="${earningsSavings}" header-image-custom-styles="width: 256px"></modal-header>
+          <modal-header current-screen="otp-validation" header-text="All that you deserve. <br/> And some more." header-image="${earningsSavings}" header-image-custom-styles="width: 256px"></modal-header>
         </div>
         <div class="otp-validation-screen">
           <div class="content">
