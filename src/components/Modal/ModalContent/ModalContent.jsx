@@ -3,6 +3,7 @@ import '../../../screens/SavingsGoalScreen/SavingsGoalScreen.jsx';
 import '../../../screens/SavingsPlanScreen/SavingsPlanScreen.jsx';
 import '../../../screens/SelectPlanScreen/SelectPlanScreen.jsx';
 import '../../../screens/CreateAccountScreen/CreateAccountScreen.jsx';
+import '../../../screens/OtpValidationScreen/OtpValidationScreen.jsx';
 import styles from "./ModalContent.scss";
 
 class ModalContent extends HTMLElement {
@@ -38,8 +39,6 @@ class ModalContent extends HTMLElement {
 
   getScreenComponent(screen) {
     switch(screen) {
-      case 'explainer':
-        return '<explainer-screen></explainer-screen>';
       case 'savings-goal':
         return '<savings-goal-screen></savings-goal-screen>';
       case 'select-plan':
@@ -48,9 +47,10 @@ class ModalContent extends HTMLElement {
         return '<create-account-screen></create-account-screen>';
       case 'savings-plan':
         return '<savings-plan-screen></savings-plan-screen>';
-      
+      case 'otp-validation':
+        return '<otp-validation-screen></otp-validation-screen>';
       default:
-        return '<p>Unknown screen</p>';
+        return '<explainer-screen></explainer-screen>';
     }
   }
 }
