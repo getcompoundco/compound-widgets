@@ -24,6 +24,7 @@ class SavingsPlanScreen extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>${styles}</style>
       <modal-header 
+      current-screen="savings-plan"
         header-text="Make Your Savings Interest-Ing."
         subheader-text="Powered By Compound"
         header-image="${confettiIcon}"
