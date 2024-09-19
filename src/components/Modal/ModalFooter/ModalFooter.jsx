@@ -88,9 +88,9 @@ class ModalFooter extends HTMLElement {
       case "select-plan":
         return "create-account";
       case "create-account":
+        return "otp-validation";
+      case "otp-validation":
         return "savings-plan";
-      case "savings-plan":
-        return "explainer";
       default:
         return "explainer";
     }
