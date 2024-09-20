@@ -71,11 +71,14 @@ class SavingsPlanScreen extends HTMLElement {
 
   addEventListeners() {
     const footer = this.shadowRoot.querySelector("modal-footer");
-    footer.addEventListener("footer-continue", () => this.handleContinue());
+    footer.addEventListener("footer-continue", (e) => this.handleContinue(e));
   }
 
-  handleContinue() {
-    console.log("Make Your First Deposit clicked");
+  handleContinue(e) {
+    const modal = this.closest("compound-modal");
+    if (modal) {
+      modal.setAttribute("current-screen", e.detail.screen);
+    }
   }
 }
 
