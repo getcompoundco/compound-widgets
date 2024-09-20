@@ -67,9 +67,20 @@
 
 @media screen and (max-width: 450px) {
   .modal .modal-content {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    max-width: 100%;
     border-radius: 0px;
+    max-width: 100%;
+  }
+
+  .close {
+    top: 16px;
+    right: 20px;
+    font-size: 24px; 
+  }
+  
+  .show {
+    width: 100vw;
+    height: 100vh;
   }
 }

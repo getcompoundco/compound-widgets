@@ -11,151 +11,181 @@ $background-color: #ffffff;
   align-items: center;
 }
 
-.container {
-  background-color: $background-color;
-  border-radius: 16px;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  
-  @media (max-width: $mobile-breakpoint) {
-    height: 67%;
-    justify-content: center;
+.explainer-screen {
+  .container {
+    background-color: $background-color;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width: $mobile-breakpoint) {
+      height: 58%;
+      justify-content: center;
+    }
   }
-}
 
-.body {
-  padding: 32px;
-}
+  .body {
+    padding: 32px;
 
-.content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 375px;
-  background-color: $background-color;
-}
+    @media (max-width: $mobile-breakpoint) {
+      padding: 0 16px;
+    }
+  }
 
-.content-para {
-  height: 82px;
-  width: inherit;
-  gap: 4px;
-}
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 375px;
+    background-color: $background-color;
 
-.content-title {
-  color: $primary-color;
-  font-family: "Manier", sans-serif;
-  font-size: 26px;
-  font-weight: 500;
-  line-height: 34px;
-  text-align: center;
-  margin: 0;
-}
+    @media (max-width: $mobile-breakpoint) {
+      padding: 8px;
+      height: 100%;
+    }
+  }
 
-.content-desc {
-  color: $secondary-color;
-  font-family: "Articulat CF", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: -1.1%;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
+  .content-para {
+    height: 82px;
+    width: inherit;
+    gap: 4px;
+  }
 
-.carousel-content {
-  height: 227px;
-}
+  .content-title {
+    color: $primary-color;
+    font-family: "Manier", sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 34px;
+    text-align: center;
+    margin: 0;
+  }
 
-.carousel {
-  position: relative;
-  @include flex-center;
-}
+  .content-desc {
+    color: $secondary-color;
+    font-family: "Articulat CF", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
 
-.carousel-images {
-  position: relative;
-  @include flex-center;
-  margin-bottom: 10px;
-  height: 199px;
-}
+  .carousel-content {
+    height: 227px;
+  }
 
-.carousel-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0;
-  z-index: 1;
+  .carousel {
+    position: relative;
+    @include flex-center;
+  }
 
-  @media (max-width: $mobile-breakpoint) {
+  .carousel-images {
+    position: relative;
+    @include flex-center;
+    margin-bottom: 10px;
+    height: 199px;
+  }
+
+  .carousel-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    z-index: 1;
+    @media (max-width: $mobile-breakpoint) {
+      display: none;
+    }
+
+    &.left {
+      left: 10px;
+    }
+
+    &.right {
+      right: 10px;
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .indicators {
+    @include flex-center;
+    height: 12px;
+    margin-top: 24px;
+
+    @media (max-width: $mobile-breakpoint) {
+      height: 10px;
+      margin-top: 16px;
+    }
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+
+    &.active {
+      background-color: #333;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .text {
     display: none;
+
+    &.active {
+      display: block;
+    }
   }
 
-  &.left {
-    left: 10px;
+  .carousel-image {
+    object-fit: contain;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      height: 140px;
+    }
   }
 
-  &.right {
-    right: 10px;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
-  img {
-    width: 32px;
-    height: 32px;
+  .text.active,
+  .carousel-image.active {
+    animation: fadeIn 0.5s ease-in-out;
   }
-}
 
-.indicators {
-  @include flex-center;
-  height: 12px;
-  margin-top: 24px;
-}
-
-.indicator {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ccc;
-  margin: 0 5px;
-  cursor: pointer;
-  border: none;
-  padding: 0;
-
-  &.active {
-    background-color: #333;
+  @media screen and (max-width: 450px) {
+    height: 100vh;
   }
-}
-
-.text {
-  display: none;
-
-  &.active {
-    display: block;
-  }
-}
-
-.carousel-image {
-  object-fit: contain;
-  display: none;
-
-  &.active {
-    display: block;
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.text.active, .carousel-image.active {
-  animation: fadeIn 0.5s ease-in-out;
 }

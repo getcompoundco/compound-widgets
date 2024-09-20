@@ -26,12 +26,13 @@ class SavingsGoalScreen extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
         <style>${styles}</style>
+        <div class="savings-goal-screen">
         <modal-header
           current-screen="savings-goal"
           header-text="Earn 20% on Every Deposit"
           header-image="${goldAndSilverCoins}"
         ></modal-header>
-        <div class="savings-goal-screen">
+        <div class="container">
           <div class="content">
             <div class="text-block">
               <h2 class="title">How much are you thinking of saving?</h2>
@@ -63,6 +64,7 @@ class SavingsGoalScreen extends HTMLElement {
           button-disabled
           button-text="Continue"
         ></modal-footer>
+        </div>
     `;
   }
 

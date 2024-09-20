@@ -55,27 +55,29 @@ class ExplainerScreen extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <style>${styles}</style>
+      <div class="explainer-screen">
       <modal-header current-screen="explainer"></modal-header>
       <div class="container">
-        <div class="body">
-          <div class="content">
-            <div class="content-para"></div>
-            <div class="carousel-content">
-              <div class="carousel" aria-roledescription="carousel" aria-label="Explainer content">
-                <button class="carousel-btn left" aria-label="Previous">
-                  <img src="${navLeft}" alt="Left Button" />
-                </button>
-                <div class="carousel-images"></div>
-                <button class="carousel-btn right" aria-label="Next">
-                  <img src="${navRight}" alt="Right Button" />
-                </button>
-              </div>
-              <div class="indicators"></div>
-            </div>
-          </div>
-        </div>
+      <div class="body">
+      <div class="content">
+      <div class="content-para"></div>
+      <div class="carousel-content">
+      <div class="carousel" aria-roledescription="carousel" aria-label="Explainer content">
+      <button class="carousel-btn left" aria-label="Previous">
+      <img src="${navLeft}" alt="Left Button" />
+      </button>
+      <div class="carousel-images"></div>
+      <button class="carousel-btn right" aria-label="Next">
+      <img src="${navRight}" alt="Right Button" />
+      </button>
+      </div>
+      <div class="indicators"></div>
+      </div>
+      </div>
+      </div>
       </div>
       <modal-footer current-screen="explainer" button-text="Continue"></modal-footer>
+      </div>
     `;
 
     this.updateCarousel();
