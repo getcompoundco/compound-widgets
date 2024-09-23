@@ -24,8 +24,9 @@ class CreateAccountScreen extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <modal-header current-screen="create-account" header-text="Do more with your Savings. Earn 12%." header-image="${mobileNotification}"></modal-header>
       <div class="create-account-screen">
+      <modal-header current-screen="create-account" header-text="Do more with your Savings. Earn 12%." header-image="${mobileNotification}"></modal-header>
+      <div class="container">
         <div class="content">
           <div class="text-block">
             <h2 class="title">Create Your Account</h2>
@@ -39,15 +40,14 @@ class CreateAccountScreen extends HTMLElement {
                 <option value="+91">🇮🇳 +91</option>
               </select>
               <div class="divider"></div>
-              <input type="tel" id="phone" placeholder="(555) 000-0000" value="${
-                this.phoneNumber
-              }">
+              <input type="tel" id="phone" placeholder="(555) 000-0000" value="${this.phoneNumber}">
             </div>
             <p class="error-message" aria-live="polite"></p>
           </div>
         </div>
       </div>
       <modal-footer current-screen="create-account" button-disabled button-text="Continue"></modal-footer>
+      </div>
     `;
 
     this.updateElements();
@@ -89,19 +89,19 @@ class CreateAccountScreen extends HTMLElement {
   formatPhoneNumber(input) {
     const digitsOnly = input.value.replace(/\D/g, "");
     let formattedNumber = "";
-  
+
     if (digitsOnly.length > 0) {
       formattedNumber += "(" + digitsOnly.slice(0, 3);
-      
+
       if (digitsOnly.length > 3) {
         formattedNumber += ") " + digitsOnly.slice(3, 6);
-        
+
         if (digitsOnly.length > 6) {
           formattedNumber += "-" + digitsOnly.slice(6, 10);
         }
       }
     }
-  
+
     input.value = formattedNumber;
     this.phoneNumber = formattedNumber;
   }

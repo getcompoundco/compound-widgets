@@ -23,6 +23,7 @@ class SavingsPlanScreen extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <style>${styles}</style>
+      <div class="savings-plan-screen">
       <modal-header 
       current-screen="savings-plan"
         header-text="Make Your Savings Interest-Ing."
@@ -30,9 +31,8 @@ class SavingsPlanScreen extends HTMLElement {
         header-image="${confettiIcon}"
         header-text-custom-styles="padding: 30px 40px 6px"
         subheader-text-custom-styles="color: #FFFFFF; font-size: 14px; line-height: 24px;"
-        header-image-custom-styles="position: absolute; top: 105px; left: 220px; width: 170px; height: 170px;"
       ></modal-header>
-      <div class="savings-plan-screen">
+      <div class="container">
         <div class="content">
           <div class="content-heading">
             <h2 class="content-title">Your Savings Plan</h2>
@@ -66,6 +66,7 @@ class SavingsPlanScreen extends HTMLElement {
         current-screen="savings-plan"
         button-text="Make Your First Deposit"
       ></modal-footer>
+      </div>
     `;
   }
 

@@ -18,12 +18,13 @@ class SelectPlanScreen extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
         <style>${styles}</style>
+        <div class="select-plan-screen">
         <modal-header
         current-screen="select-plan"
           header-text="90 Days. AED 39 Earned."
           header-image="${hourglass}"
         ></modal-header>
-        <div class="select-plan-screen">
+        <div class="container">
           <div class="content">
             <div class="text-block">
               <h2 class="title">Select your plan</h2>
@@ -87,6 +88,7 @@ class SelectPlanScreen extends HTMLElement {
           current-screen="select-plan"
           button-text="Continue"
         ></modal-footer>
+        </div>
     `;
   }
 

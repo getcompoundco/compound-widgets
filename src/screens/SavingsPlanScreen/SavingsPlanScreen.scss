@@ -1,12 +1,26 @@
 .savings-plan-screen {
-  background-color: #ffffff;
-  border-radius: 16px;
-  overflow: hidden;
   height: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+  modal-header {
+    --header-image-left: 220px;
+    --header-image-top: 150px;
+    --header-image-pos: absolute;
+  }
+
+  .container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: 450px) {
+      height: 58%;
+    }
+  }
 
   .content {
     display: flex;
@@ -83,7 +97,11 @@
   }
 
   @media (max-width: 450px) {
-    width: 100%;
-    height: 68%;
+    height: 100vh;
+
+    modal-header {
+      --header-image-left: 200px;
+      --header-image-top: 125px;
+    }
   }
 }

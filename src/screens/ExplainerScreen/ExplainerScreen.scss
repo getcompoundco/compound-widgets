@@ -30,10 +30,7 @@ $background-color: #ffffff;
 
   .body {
     padding: 32px;
-
-    @media (max-width: $mobile-breakpoint) {
-      padding: 0 16px;
-    }
+    height: 100%;
   }
 
   .content {
@@ -44,6 +41,7 @@ $background-color: #ffffff;
     background-color: $background-color;
 
     @media (max-width: $mobile-breakpoint) {
+      justify-content: space-evenly;
       padding: 8px;
       height: 100%;
     }
@@ -159,7 +157,6 @@ $background-color: #ffffff;
   }
 
   .carousel-image {
-    object-fit: contain;
     display: none;
 
     &.active {

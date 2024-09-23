@@ -45,7 +45,7 @@ class ModalHeader extends HTMLElement {
       ${
         currentScreen !== "explainer"
           ? `<img width="25" height="21" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/chevron-left.png" alt="chevron-left" />`
-          : null
+          : ''
       }
     </div>
         <div class="header-logos">

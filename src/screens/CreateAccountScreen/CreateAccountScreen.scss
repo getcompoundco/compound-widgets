@@ -1,8 +1,8 @@
 // Variables
 $primary-color: #112744;
-$secondary-color: #A0D234;
-$error-color: #FF0000;
-$border-color: #E1E4EA;
+$secondary-color: #a0d234;
+$error-color: #ff0000;
+$border-color: #e1e4ea;
 
 $font-primary: "Manier", sans-serif;
 $font-secondary: "Articulat CF", sans-serif;
@@ -28,8 +28,12 @@ $mobile-breakpoint: 450px;
 }
 
 .create-account-screen {
-  @include flex-column;
   height: 100%;
+
+  .container {
+    @include flex-column;
+    height: 100%;
+  }
 
   .content {
     padding: $spacing-unit * 4;
@@ -126,8 +130,12 @@ $mobile-breakpoint: 450px;
     text-align: center;
   }
 
-  @media (max-width: $mobile-breakpoint) {
-    height: 67%;
+  @media only screen and (max-width: $mobile-breakpoint) {
+    height: 100vh;
+
+    .container {
+      height: 58%;
+    }
 
     .input-wrapper {
       width: 300px;
@@ -135,6 +143,10 @@ $mobile-breakpoint: 450px;
 
     .subtitle {
       padding-left: 1.2rem;
+    }
+
+    modal-header {
+      --header-image-height: 144px;
     }
   }
 }
