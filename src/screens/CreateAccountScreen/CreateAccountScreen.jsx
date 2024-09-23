@@ -2,12 +2,14 @@ import styles from "./CreateAccountScreen.scss";
 import mobileNotification from "../../assets/images/mobileNotification.svg";
 import "../../components/Modal/ModalHeader/ModalHeader.jsx";
 import "../../components/Modal/ModalFooter/ModalFooter.jsx";
+import "../../components/CountryDropdwon/CountryDropdown.jsx";
 
 class CreateAccountScreen extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
     this.phoneNumber = "";
+    this.selectedCountry = { code: '+973', name: 'Bahrain', nativeName: 'البحرين', flag: '🇧🇭' }
   }
 
   connectedCallback() {
@@ -34,11 +36,7 @@ class CreateAccountScreen extends HTMLElement {
           <div class="subtitle">phone number</div>
           <div class="input-container">
             <div class="input-wrapper">
-              <select id="country-code" class="country-code">
-                <option value="+1" selected>🇺🇸 +1</option>
-                <option value="+44">🇬🇧 +44</option>
-                <option value="+91">🇮🇳 +91</option>
-              </select>
+              <country-dropdown selectedCountry='${JSON.stringify(this.selectedCountry)}'></country-dropdown>
               <div class="divider"></div>
               <input type="tel" id="phone" placeholder="(555) 000-0000" value="${this.phoneNumber}">
             </div>
@@ -56,20 +54,34 @@ class CreateAccountScreen extends HTMLElement {
   updateElements() {
     this.input = this.shadowRoot.getElementById("phone");
     this.footer = this.shadowRoot.querySelector("modal-footer");
-    this.countryCode = this.shadowRoot.querySelector("country-code");
+    this.countryDropdown = this.shadowRoot.querySelector("country-dropdown");
   }
 
   addEventListeners() {
     this.input.addEventListener("input", this.handleInput);
     this.input.addEventListener("blur", this.handleBlur);
     this.footer.addEventListener("footer-continue", this.handleContinue);
+    this.countryDropdown.addEventListener(
+      "country-select",
+      this.handleCountrySelect
+    );
   }
 
   removeEventListeners() {
     this.input.removeEventListener("input", this.handleInput);
     this.input.removeEventListener("blur", this.handleBlur);
     this.footer.removeEventListener("footer-continue", this.handleContinue);
+    this.countryDropdown.removeEventListener(
+      "country-select",
+      this.handleCountrySelect
+    );
   }
+
+  handleCountrySelect = (e) => {
+    this.selectedCountry = e.detail;
+    //Testing here
+    console.log("Selected country:", this.selectedCountry);
+  };
 
   focusInput() {
     this.input.focus();

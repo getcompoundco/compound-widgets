@@ -93,8 +93,10 @@ class ModalHeader extends HTMLElement {
         return "savings-goal";
       case "create-account":
         return "select-plan";
-      case "savings-plan":
+      case "otp-validation":
         return "create-account";
+      case "savings-plan":
+        return "otp-validation";
       default:
         return "explainer";
     }

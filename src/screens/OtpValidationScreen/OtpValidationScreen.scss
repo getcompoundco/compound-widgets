@@ -1,0 +1,131 @@
+$primary-color: #112744;
+$secondary-color: #a0d234;
+$error-color: #ff0000;
+$border-color: #e1e4ea;
+$subtitle-color: #525866;
+$modal-bg-color: #fff;
+$timer-color: #ec7ba4;
+
+$font-primary: "Manier", sans-serif;
+$font-secondary: "Articulat CF", sans-serif;
+
+$spacing-unit: 8px;
+$mobile-breakpoint: 450px;
+
+@mixin font-style($size, $weight, $line-height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+.otp-validation-screen {
+  background-color: $modal-bg-color;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 390px;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 375px;
+    background-color: $modal-bg-color;
+    padding: 32px;
+    flex-grow: 1;
+  }
+
+  .text-block {
+    height: 50px;
+  }
+
+  .title {
+    @include font-style(26px, 500, 34px);
+    color: $primary-color;
+    font-family: $font-primary;
+    text-align: center;
+    margin: 0;
+  }
+
+  .subtitle {
+    @include font-style(16px, 400, 24px);
+    font-family: $font-secondary;
+    text-align: center;
+    letter-spacing: -0.011em;
+    color: $subtitle-color;
+  }
+
+  :host {
+    @include font-style(24px, 500, 32px);
+    font-family: $font-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .otp-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .otp-input {
+    width: 54px;
+    height: 35px;
+    padding: 16px 8px 16px 8px;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+  }
+
+  .timer {
+    @include font-style(16px, 700, 16.32px);
+    color: $timer-color;
+    margin-bottom: 10px;
+    font-family: $font-secondary;
+    text-align: center;
+  }
+
+  .resend-container {
+    @include font-style(12px, 400, 12.24px);
+    color: #888;
+    transition: color 0.3s ease;
+    font-family: $font-secondary;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12.24px;
+    text-align: center;
+  }
+
+  .resend-container.active {
+    color: #000;
+  }
+
+  .resend {
+    font-weight: 700;
+    color: $timer-color;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+    pointer-events: none;
+    cursor: pointer;
+  }
+
+  .resend.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    height: 68%;
+  }
+}

@@ -99,7 +99,7 @@ class SelectPlanScreen extends HTMLElement {
     });
 
     const footer = this.shadowRoot.querySelector("modal-footer");
-    footer.addEventListener("footer-continue", () => this.handleContinue());
+    footer.addEventListener("footer-continue", (e) => this.handleContinue(e));
   }
 
   handlePlanSelection(e) {
