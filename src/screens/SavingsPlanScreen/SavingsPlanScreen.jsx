@@ -21,6 +21,7 @@ class SavingsPlanScreen extends HTMLElement {
   render() {
     const endDate = "3rd April, 2024"
 
+    // header-text-custom-styles="padding: 30px 40px 6px"
     this.shadowRoot.innerHTML = `
       <style>${styles}</style>
       <div class="savings-plan-screen">
@@ -29,7 +30,6 @@ class SavingsPlanScreen extends HTMLElement {
         header-text="Make Your Savings Interest-Ing."
         subheader-text="Powered By Compound"
         header-image="${confettiIcon}"
-        header-text-custom-styles="padding: 30px 40px 6px"
         subheader-text-custom-styles="color: #FFFFFF; font-size: 14px; line-height: 24px;"
       ></modal-header>
       <div class="container">

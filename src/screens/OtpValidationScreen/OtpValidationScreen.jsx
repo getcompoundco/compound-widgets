@@ -23,10 +23,11 @@ class OtpValidationScreen extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = `
         <style>${styles}</style>
-        <div class="otp-screen-header-container">
-          <modal-header current-screen="otp-validation" header-text="All that you deserve. <br/> And some more." header-image="${earningsSavings}" header-image-custom-styles="width: 256px"></modal-header>
-        </div>
         <div class="otp-validation-screen">
+        <div class="otp-screen-header-container">
+          <modal-header current-screen="otp-validation" header-text="All that you deserve. And some more." header-image="${earningsSavings}" header-image-custom-styles="width: 256px"></modal-header>
+        </div>
+        <div class="container">
           <div class="content">
             <div class="text-block">
               <h2 class="title">Verify Your Phone</h2>
@@ -43,6 +44,7 @@ class OtpValidationScreen extends HTMLElement {
             </div>
           </div>
         <modal-footer current-screen="otp-validation" button-disabled button-text="Continue"></modal-footer>
+        </div>
     `;
   }
 

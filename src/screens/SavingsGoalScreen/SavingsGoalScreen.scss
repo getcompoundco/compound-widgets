@@ -116,6 +116,6 @@ $mobile-breakpoint: 450px;
   }
 
   @media (max-width: $mobile-breakpoint) {
-    height: 100vh;
+    height: 100dvh;
   }
 }

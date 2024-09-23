@@ -12,6 +12,11 @@ $font-secondary: "Articulat CF", sans-serif;
 $spacing-unit: 8px;
 $mobile-breakpoint: 450px;
 
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 @mixin font-style($size, $weight, $line-height) {
   font-size: $size;
   font-weight: $weight;
@@ -19,23 +24,23 @@ $mobile-breakpoint: 450px;
 }
 
 .otp-validation-screen {
-  background-color: $modal-bg-color;
-  border-radius: 16px;
-  overflow: hidden;
-  width: 390px;
-  max-width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
+
+  modal-header {
+    --header-text-padding: 31px 40px 6px;
+  }
+
+  .container {
+    @include flex-column;
+    height: 100%;
+  }
 
   .content {
-    display: flex;
-    flex-direction: column;
+    padding: $spacing-unit * 4;
+    @include flex-column;
+    align-items: center;
     height: 375px;
-    background-color: $modal-bg-color;
-    padding: 32px;
-    flex-grow: 1;
+    background-color: white;
   }
 
   .text-block {
@@ -124,8 +129,15 @@ $mobile-breakpoint: 450px;
     pointer-events: auto;
   }
 
-  @media (max-width: 450px) {
-    width: 100%;
-    height: 68%;
+  @media (max-width: $mobile-breakpoint) {
+    height: 100dvh;
+
+    .container {
+      height: 58%;
+    }
+
+    modal-header {
+      --header-text-padding: 30px 80px 15px;
+    }
   }
 }

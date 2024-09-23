@@ -5,12 +5,13 @@
     --header-image-left: 220px;
     --header-image-top: 150px;
     --header-image-pos: absolute;
+    --header-text-padding: 30px 40px 6px;
   }
 
   .container {
     background-color: #ffffff;
     border-radius: 16px;
-    overflow: hidden;
+    // overflow: hidden;
     height: 100%;
     text-align: center;
     display: flex;
@@ -97,7 +98,7 @@
   }
 
   @media (max-width: 450px) {
-    height: 100vh;
+    height: 100dvh;
 
     modal-header {
       --header-image-left: 200px;

@@ -15,7 +15,6 @@ $mobile-breakpoint: 450px;
   .container {
     background-color: #ffffff;
     border-radius: 16px;
-    overflow: hidden;
     width: 390px;
     max-width: 100%;
     text-align: center;
@@ -189,6 +188,6 @@ $mobile-breakpoint: 450px;
   }
 
   @media (max-width: $mobile-breakpoint) {
-    height: 100vh;
+    height: 100dvh;
   }
 }

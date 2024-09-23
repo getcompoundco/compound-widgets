@@ -24,7 +24,7 @@
     animation: modalGrow 0.3s ease-out;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   .close {
@@ -47,7 +47,7 @@
 
   .slide-container {
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     will-change: transform;
   }
 }
@@ -66,9 +66,12 @@
 /* Responsive adjustments */
 
 @media screen and (max-width: 450px) {
+  .modal{
+    height: 100dvh;
+  }
   .modal .modal-content {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     border-radius: 0px;
     max-width: 100%;
   }
@@ -81,6 +84,6 @@
   
   .show {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
   }
 }

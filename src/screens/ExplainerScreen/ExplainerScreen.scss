@@ -15,7 +15,7 @@ $background-color: #ffffff;
   .container {
     background-color: $background-color;
     border-radius: 16px;
-    overflow: hidden;
+    // overflow: hidden;
     width: 100%;
     max-width: 100%;
     text-align: center;
@@ -183,6 +183,6 @@ $background-color: #ffffff;
   }
 
   @media screen and (max-width: 450px) {
-    height: 100vh;
+    height: 100dvh;
   }
 }
