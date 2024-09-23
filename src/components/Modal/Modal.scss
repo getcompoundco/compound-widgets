@@ -24,7 +24,6 @@
     animation: modalGrow 0.3s ease-out;
     display: flex;
     flex-direction: column;
-    // overflow: hidden;
   }
 
   .close {
@@ -47,7 +46,6 @@
 
   .slide-container {
     width: 100%;
-    // overflow: hidden;
     will-change: transform;
   }
 }

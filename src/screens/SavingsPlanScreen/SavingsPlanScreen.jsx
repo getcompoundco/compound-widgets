@@ -21,7 +21,6 @@ class SavingsPlanScreen extends HTMLElement {
   render() {
     const endDate = "3rd April, 2024"
 
-    // header-text-custom-styles="padding: 30px 40px 6px"
     this.shadowRoot.innerHTML = `
       <style>${styles}</style>
       <div class="savings-plan-screen">
